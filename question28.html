@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<TITLE>Imgaeオブジェクト</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="question28.css">
+</HEAD>
+
+<BODY>
+    <H1>ようこそホームページへ！</H1>
+    ※このホームページは、時刻に応じて背景色と文字色が変化します。<BR>
+<BR>
+<script type="text/javascript" src="q28.js"></script>
+
+<span id="view_time"></span>
+
+
+<script type="text/javascript">
+document.getElementById("view_time").innerHTML = getNow();
+
+
+function getNow() {
+	var now = new Date();
+	var hour = now.getHours();
+	var min = now.getMinutes();
+	var s = "ただいま" + hour + "時" + min + "分です" ; 
+	return s;
+}
+</script>
+
+<form name="frm1">
+    <script type="text/javascript" src="q28.js"></script>
+        
+    <BR>
+<BR>
+<INPUT type="button" value="前へ" name="back" onClick="location.href='http://localhost/question27.html'" style="cursor:pointer;" >
+<BR>
+<BR>
+<INPUT type="button" value="次へ" name="next" onClick="location.href='http://localhost/question29.html'" style="cursor:pointer;" >
+</BODY>
+
+</HTML>
